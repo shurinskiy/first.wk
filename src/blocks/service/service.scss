@@ -1,0 +1,32 @@
+.service {
+	$self: &;
+	padding-bottom: 60px;
+	border-bottom: 1px solid #272727;
+	margin-bottom: 135px;
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+		
+		@include media('<=xxlg') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__card {
+		grid-column: span 1;
+	}
+}

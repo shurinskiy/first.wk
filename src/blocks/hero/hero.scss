@@ -5,6 +5,7 @@
 	margin-top: -90px;
 	padding-top: 90px;
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('#{$images-path}hero-bg-1.png') center top / cover no-repeat transparent;
+	margin-bottom: 100px;
 	
 	@include media('<=xs') {
 		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('#{$images-path}hero-bg-top-1.png') center top / cover no-repeat transparent;

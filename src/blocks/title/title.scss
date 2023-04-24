@@ -1,0 +1,23 @@
+.title {
+	$self: &;
+	color: $accent;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-family: "GGM", sans-serif;
+	
+	@include media('<=lg') {
+		font-size: 24px;
+	}
+	
+	@include media('<=sm') {
+		font-size: 20px;
+	}
+	
+	@include media('<=xs') {
+		font-size: 18px;
+	}
+	
+	&_small {
+		font-size: 20px;
+	}
+}
