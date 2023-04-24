@@ -1,0 +1,47 @@
+.card-a {
+	$self: &;
+	padding: 90px 20px;
+	display: flex;
+	// align-items: center;
+	justify-content: center;
+
+	&__inner {
+		max-width: 460px;
+
+		&::before {
+			display: none;
+			content: '';
+			width: 48px;
+			height: 48px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			margin-bottom: 33px;
+		}
+	
+		&_crown::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-crown-view-light');
+		}
+		
+		&_gewel::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-gewel-view-light');
+		}
+		
+		&_timer::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-timer-view-light');
+		}
+	}
+
+	&__title {
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		font-family: "GTR", sans-serif;
+		color: #fff;
+	}
+}

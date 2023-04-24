@@ -1,0 +1,17 @@
+.advantages {
+	$self: &;
+	border-bottom: 1px solid #272727;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__card {
+		grid-column: span 1;
+
+		& + & {
+			border-left: 1px solid #272727;
+		}
+	}
+}

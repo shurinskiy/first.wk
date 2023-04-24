@@ -1,6 +1,8 @@
 .card-s {
 	$self: &;
 	position: relative;
+	text-decoration: none;
+	color: inherit;
 			
 	@include media('<=md') {
 		max-height: 300px;
@@ -20,7 +22,7 @@
 		left: 0;
 		width: 100%;
 		min-height: 70%;
-		background: linear-gradient(180deg, #151515 0%, rgba(21, 21, 21, 0) 100%);
+		background: linear-gradient(180deg, rgba(21, 21, 21, 0.6) 0%, rgba(21, 21, 21, 0) 100%);
 		z-index: 1;
 		padding: 25px 28px;
 	}
@@ -43,7 +45,7 @@
 	
 	&__small-text {
 		display: block;
-		font-family: "GR", sans-serif;
+		font-family: "GTR", sans-serif;
 		color: hsla(0, 0%, 100%, 0.6);
 		
 		@include media('<=sm') {

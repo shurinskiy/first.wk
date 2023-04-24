@@ -1,0 +1,45 @@
+.advice {
+	$self: &;
+	padding: 100px 0;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__side {
+		width: 100%;
+		max-width: 560px;
+		margin-right: 20px;
+	}
+
+	&__title {
+		margin-bottom: 16px;
+	}
+	
+	&__text {
+		font-family: "GTR", sans-serif;
+		font-size: 20px;
+		color: #fff;
+		margin-bottom: 35px;
+	}
+
+	&__button {
+
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 38px;
+		width: 100%;
+		
+		@include media('<=xxlg') {
+			grid-gap: 24px;
+		}
+	}
+
+	&__card {
+		grid-column: span 1;
+	}
+}
