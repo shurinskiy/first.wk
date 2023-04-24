@@ -1,0 +1,95 @@
+.h-navi {
+	$self: &;
+	box-sizing: border-box;
+
+	@include media('<=md') {
+		display: flex;
+		flex-flow: column nowrap;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		background-color: lighten(rgba($bg, 0.95), 1%);
+		backdrop-filter: blur(15px);
+		padding: 50px 30px 20px;
+		overflow: auto;
+	}
+
+	&__close {
+		display: none;
+		@extend %reset-button;
+		width: 38px;
+		height: 38px;
+		background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" preserveAspectRatio="none"><defs><style>.line{fill:#535353;fill-rule:evenodd;}</style></defs><rect class="line" x="10.5" y="9" width="26" height="2" transform="rotate(45 10.5 9)"/><rect class="line" x="28.8" y="10.5" width="26" height="2" transform="rotate(135 28.8 10.5)"/></svg>') center / contain no-repeat transparent;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		right: 10px;
+
+		@include media('<=md') {
+			display: block;
+		}
+	}
+
+	&__logo-m {
+		display: none;
+
+		img {
+			display: block;
+		}
+
+		@include media('<=md') {
+			display: block;
+			margin-bottom: 35px;
+		}
+	}
+	
+	&__menu {
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		@include media('<=md') {
+			flex-flow: column nowrap;
+			align-items: flex-start;		
+			flex-grow: 1;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__link {
+		box-sizing: border-box;
+		font-family: "GGM", sans-serif;
+		text-transform: uppercase;
+		font-size: 12px;
+		white-space: nowrap;
+		padding: 10px 20px;
+		color: inherit;
+		text-decoration: none;
+		color: #fff;
+		
+		@include media('<=xlg') {
+			font-size: 11px;
+			padding: 10px;
+		}
+		
+		@include media('<=md') {
+			padding: 10px 0;
+			width: 100%;
+		}
+	}
+
+	&__buttons-m {
+		display: none;
+
+		@include media('<=md') {
+			display: block;
+		}
+
+		.button {
+			min-width: 100%;
+
+			& + .button {
+				margin-top: 4px;
+			}
+		}
+	}
+}

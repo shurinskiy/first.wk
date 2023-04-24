@@ -1,0 +1,95 @@
+.button {
+	$self: &;
+	@extend %reset-button;
+	border-radius: 8px;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	padding: 21px 22px;
+	
+	@include media('<=sm') {
+		font-size: 10px;
+		padding: 18px 22px;
+	}
+
+	&::before {
+		display: none;
+		content: '';
+		height: 18px;
+		width: 18px;
+		margin-right: 14px;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	span {
+		white-space: nowrap;
+
+		&:nth-child(2) {
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
+	}
+	
+	&_primary {
+		font-family: "GGSB", sans-serif;
+		background-color: $accent;
+		color: #2d2d2d;
+		
+		&#{$self}_wapp::before { background-image: url('#{$images-path}icons-sprite.svg#icon-wapp-view-black'); }
+		&#{$self}_tgm::before { background-image: url('#{$images-path}icons-sprite.svg#icon-tgm-view-black'); }
+		&#{$self}_inst::before { background-image: url('#{$images-path}icons-sprite.svg#icon-inst-view-black'); }
+		&#{$self}_mail::before { background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-black'); }
+		&#{$self}_phone::before { background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-black'); }
+	}
+
+	&_secondary {
+		color: $accent;
+		border: 1px solid $accent;
+	}
+	
+	&_outlined {
+		border: 1px solid #777;
+		color: #fff;
+	}
+
+	&_small {
+		color: $accent;
+		padding: 14px 16px;
+		border: 1px solid #3d3d3d;
+		justify-content: flex-start;
+		font-size: 10px;
+	}
+
+	&_wapp::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-wapp-view-light');
+	}
+	
+	&_tgm::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-tgm-view-light');
+	}
+	
+	&_inst::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-inst-view-light');
+	}
+	
+	&_mail::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-light');
+		background-size: 18px 13px;
+	}
+	
+	&_phone::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-light');
+	}
+}
