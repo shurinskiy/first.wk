@@ -1,11 +1,15 @@
 .vip {
 	$self: &;
 	border-top: 1px solid #272727;
-	border-bottom: 1px solid #272727;
 
-	&__inner {
+	&__head {
 		padding-top: 140px;
 		padding-bottom: 140px;
+		
+		@include media('<=xs') {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 	}
 
 	&__title {
@@ -13,6 +17,39 @@
 	}
 
 	&__text {
+		line-height: 1.4;
+		
+		@include media('<=xs') {
+			line-height: 1.6;
+			font-size: 14px;
+		}
+	}
+	
+	&__cards {
+		border-top: 1px solid #272727;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xs') {
+			border-bottom: 1px solid #272727;
+			grid-template-columns: 1fr;
+			padding: 50px 20px;
+			grid-gap: 45px;
+		}
+	}
+	
+	&__card {
+		grid-column: span 1;
+		border-bottom: 1px solid #272727;
+		border-right: 1px solid #272727;
 
+		@include media('<=xs') {
+			border: none;
+			margin: 0;
+		}
 	}
 }

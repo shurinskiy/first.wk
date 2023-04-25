@@ -1,0 +1,119 @@
+.team {
+	$self: &;
+	margin-bottom: 110px;
+	
+	@include media('<=xs') {
+		margin-bottom: 50px;
+	}
+
+	&__inner {
+
+	}
+
+	&__head {
+		padding-top: 140px;
+		padding-bottom: 140px;
+		
+		@include media('<=xs') {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__title {
+
+	}
+
+	&__text {
+		
+		@include media('<=xs') {
+			font-size: 14px;
+			line-height: 1.6;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 16px;
+		
+		@include media('<=lg') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__card {
+		box-sizing: border-box;
+		grid-column: span 1;
+		border: 1px solid #3D3D3D;
+		border-radius: 8px;
+		padding: 48px 20px;
+		
+		@include media('<=xs') {
+			padding: 30px 20px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 20px;
+		}
+	}
+
+	&__photo {
+		outline: 1px solid $accent;
+		outline-offset: 3px;
+		overflow: hidden;
+		border-radius: 50%;
+		height: 140px;
+		width: 140px;
+		margin: 0 auto 20px;
+		
+		img {
+			display: block;
+		}
+		
+		@include media('<=xs') {
+			height: 100px;
+			width: 100px;
+		}
+		
+		@include media('<=xxs') {
+			height: 70px;
+			width: 70px;
+		}
+	}
+
+	&__name {
+		font-family: "GGM", sans-serif;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		text-align: center;
+		color: $accent;
+		
+		@include media('<=xs') {
+			font-size: 12px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 5px;
+			font-size: 9px;
+		}
+	}
+	
+	&__position {
+		font-family: "GTR", sans-serif;
+		text-align: center;
+		color: #8A8A8A;
+		
+		@include media('<=xs') {
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 10px;
+		}
+	}
+}

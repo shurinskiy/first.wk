@@ -47,6 +47,7 @@
 		&#{$self}_inst::before { background-image: url('#{$images-path}icons-sprite.svg#icon-inst-view-black'); }
 		&#{$self}_mail::before { background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-black'); }
 		&#{$self}_phone::before { background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-black'); }
+		&#{$self}_phone-lined::before { background-image: url('#{$images-path}icons-sprite.svg#icon-phone-lined-view-black'); }
 	}
 
 	&_secondary {
@@ -88,8 +89,22 @@
 		background-size: 18px 13px;
 	}
 	
+	&_pdf::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-pdf-view-light');
+		height: 24px;
+		width: 20px;
+		margin-top: -5px;
+		margin-bottom: -5px;
+	}
+	
 	&_phone::before {
 		display: block;
 		background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-light');
+	}
+	
+	&_phone-lined::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-phone-lined-view-light');
 	}
 }

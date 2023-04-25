@@ -1,0 +1,133 @@
+.tariff {
+	$self: &;
+	border-top: 1px solid #272727;
+
+	&__head {
+		padding-top: 140px;
+		padding-bottom: 140px;
+		
+		@include media('<=xs') {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__title {
+
+	}
+	
+	&__text {
+		
+		@include media('<=xs') {
+			font-size: 14px;
+			line-height: 1.6;
+		}
+	}
+
+	&__cards {
+		box-sizing: border-box;
+		border-top: 1px solid #272727;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		
+		@include media('<=xlg') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=md') {
+			border: none;
+			grid-template-columns: 1fr;
+			padding: 20px;
+			grid-gap: 30px;
+		}
+		
+		@include media('<=xs') {
+			grid-gap: 20px;
+			padding: 0px 20px 50px;
+		}
+	}
+
+	&__card {
+		grid-column: span 1;
+		box-sizing: border-box;
+		border-bottom: 1px solid #272727;
+		border-right: 1px solid #272727;
+		display: flex;
+		justify-content: center;
+		padding: 50px 20px 100px;
+
+		@include media('<=md') {
+			justify-content: flex-start;
+			border: none;
+			padding: 30px;
+			background-color: #1F1F1F;
+			border-radius: 8px;
+		}
+		
+		@include media('<=xs') {
+			padding: 20px;
+		}
+	}
+
+	&__card-inner {
+		max-width: 400px;
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+
+		@include media('<=md') {
+			max-width: none;			
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 20px;
+			height: 20px;
+			margin-bottom: 35px;
+			background: url('#{$images-path}icons-sprite.svg#icon-star-view-light') center / contain no-repeat transparent;
+			
+			@include media('<=xs') {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 25px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__card-text {
+		font-family: "GTR", sans-serif;
+		margin-bottom: 60px;
+		line-height: 1.6;
+		color: #fff;
+		
+		@include media('<=xxs') {
+			margin-bottom: 40px;
+			font-size: 14px;
+		}
+	}
+
+	&__button {
+		margin-top: auto;
+		
+		@include media('<=md') {
+			width: 100%;
+			max-width: 400px;
+			margin: auto auto 0;
+		}
+
+		.button {
+			@include media('<=xxs') {
+				span:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+}

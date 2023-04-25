@@ -1,14 +1,23 @@
 .head {
 	$self: &;
-	display: flex;
+	display: grid;
+	grid-template-columns: minmax(420px, 1fr) 2fr;
+	grid-gap: 20px;
+
+	@include media('<=md') {
+		display: block;
+	}
 
 	&__title {
-		width: 100%;
-		max-width: 560px;
-		margin-right: 20px;
+		grid-column: span 1;
+
+		@include media('<=md') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__text {
+		grid-column: span 1;
 		font-family: "GTR", sans-serif;
 		max-width: 700px;
 		font-size: 20px;

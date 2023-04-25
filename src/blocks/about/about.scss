@@ -1,0 +1,184 @@
+.about {
+	$self: &;
+	box-sizing: border-box;
+	background: url('#{$images-path}about-balloon.png') top 250px left 830px / auto no-repeat, url('#{$images-path}about-bg-image.png') top left / cover no-repeat;
+	padding: 35px 0;
+	min-height: 860px;
+	display: flex;
+	position: relative;
+	flex-flow: column nowrap;
+	
+	@include media('<=md') {
+		background: url('#{$images-path}about-balloon.png') top 250px left 530px / auto no-repeat, url('#{$images-path}about-bg-image.png') top left -300px / cover no-repeat;
+	}
+	
+	@include media('<=xs') {
+		background: url('#{$images-path}about-balloon.png') top 55px right calc(55% - 35px) / 90px 50px no-repeat, linear-gradient(to top, #151515 50%, rgba(21, 21, 21, 0)), url('#{$images-path}about-bg-image.png') top -210px right 55% / cover no-repeat;
+	}
+	
+	@include media('<=xs') {
+		border-bottom: 1px solid #272727;
+		padding: 35px 0 50px;
+		min-height: 820px;
+	}
+
+	&__inner {
+		flex-grow: 1;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include media('<=md') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__main {
+
+		@include media('<=md') {
+			align-self: flex-end;
+		}
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__address-mobile {
+		display: none;
+		font-family: "GTR", sans-serif;
+		font-size: 14px;
+		color: #fff;
+		margin-bottom: 30px;
+
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+
+	&__points {
+		margin-bottom: 60px;
+		max-width: 500px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 50px 40px;
+		
+		@include media('<=xs') {
+			grid-gap: 40px 20px;
+		}
+		
+		@include media('<=xxs') {
+			grid-gap: 30px 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__point {
+
+		&:nth-child(1) {
+			grid-column: 1 / span 2;
+		}
+		
+		&:nth-child(2) {
+			grid-column: 3 / span 2;
+			
+			@include media('<=xs') {
+				grid-row: 2;
+				grid-column: 1 / span 2;
+			}
+		}
+		
+		&:nth-child(3) {
+			grid-column: 1 / span 2;
+			
+			@include media('<=xs') {
+				grid-column: 3 / span 2;
+			}
+		}
+		
+		&:nth-child(4) {
+			grid-column: 3 / span 2;
+		}
+		
+		&:nth-child(5) {
+			grid-column: span 1;
+			
+			@include media('<=xs') {
+				grid-column: span 2;
+			}
+		}
+		
+		&:nth-child(6) {
+			grid-column: span 1;
+			
+			@include media('<=xs') {
+				grid-column: span 2;
+			}
+		}
+		
+		&:nth-child(7) {
+			grid-column: span 2;
+		}
+	}
+
+	&__point-name {
+		font-family: "GTM", sans-serif;
+		text-transform: uppercase;
+		color: #636363;
+		font-size: 12px;
+		margin-bottom: 15px;
+		white-space: nowrap;
+		
+		@include media('<=xxs') {
+			font-size: 10px;
+		}
+	}
+	
+	&__point-content {
+		font-family: "GTR", sans-serif;
+		line-height: 1.5;
+		color: #fff;
+		display: flex;
+		text-decoration: none;
+		
+		@include media('<=xxs') {
+			font-size: 12px;
+		}
+	}
+
+	&__point-image {
+		text-decoration: none;
+		color: inherit;
+
+		& + & {
+			margin-left: 16px;
+		}
+	}
+	
+	&__button {
+		
+		@include media('<=xxs') {
+			width: 100%;
+		}
+	}
+	
+	&__address {
+		font-family: "GTR", sans-serif;
+		align-self: flex-end;
+		font-size: 14px;
+		color: #fff;
+		
+		@include media('<=md') {
+			width: 100%;
+		}
+		
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+}

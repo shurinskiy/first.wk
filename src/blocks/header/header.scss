@@ -31,6 +31,10 @@
 		@include media('<=md') {
 			margin-right: auto;
 		}
+
+		@include media('<=xxs') {
+			max-width: 70px;
+		}
 	}
 	
 	&__navi {
