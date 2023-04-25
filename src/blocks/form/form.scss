@@ -1,0 +1,75 @@
+.form {
+	$self: &;
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__explain {
+		font-family: "GTR", sans-serif;
+		margin-bottom: 35px;
+		font-size: 20px;
+		color: #fff;
+			
+		@include media('<=sm') {
+			font-size: 16px;
+		}
+			
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+	}
+
+	&__fields {
+		
+	}
+	
+	&__field {
+		display: block;
+		margin-bottom: 24px;
+
+		&::before {
+			display: block;
+			content: attr(data-description);
+			font-family: "GTR", sans-serif;
+			color: #747474;
+			font-size: 18px;
+			margin-bottom: 10px;
+			
+			@include media('<=xs') {
+				font-size: 14px;
+			}
+		}
+		
+		input, textarea {
+			@extend %reset-input;
+			background-color: #262626;
+			font-family: "GTR", sans-serif;
+			padding: 16px 20px;
+			border-radius: 8px;
+			min-height: 55px;
+			font-size: 16px;
+			color: #fff;
+			resize: none;
+			width: 100%;
+			
+			@include media('<=xs') {
+				font-size: 14px;
+			}
+			
+			&::placeholder {
+				color: #4D4D4D;
+			}
+		}
+
+		textarea {
+			min-height: 105px;
+		}
+		
+		
+	}
+	
+	&__submit {
+		width: 100%;
+	}
+}

@@ -13,13 +13,13 @@
 	}
 	
 	@include media('<=xs') {
-		background: url('#{$images-path}about-balloon.png') top 55px right calc(55% - 35px) / 90px 50px no-repeat, linear-gradient(to top, #151515 50%, rgba(21, 21, 21, 0)), url('#{$images-path}about-bg-image.png') top -210px right 55% / cover no-repeat;
+		background: url('#{$images-path}about-balloon.png') top 55px right calc(55% - 35px) / 90px 50px no-repeat, linear-gradient(to top, #151515 50%, rgba(21, 21, 21, 0)), url('#{$images-path}about-bg-image.png') top -200px right 55% / cover no-repeat;
 	}
 	
 	@include media('<=xs') {
 		border-bottom: 1px solid #272727;
 		padding: 35px 0 50px;
-		min-height: 820px;
+		min-height: 800px;
 	}
 
 	&__inner {
