@@ -1,0 +1,66 @@
+.card-f {
+	$self: &;
+	position: relative;
+	
+	&__image {
+		display: block;
+		overflow: hidden;
+		border-radius: 8px;
+		margin-bottom: 16px;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			min-height: 470px;
+		}
+	}
+
+	&__info {
+		box-sizing: border-box;
+		
+		@include media('<=sm') {
+			min-height: 70%;
+			background: linear-gradient(to top, rgba(21, 21, 21, 0) 0%, rgba(21, 21, 21, 0.75) 100%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 28px 20px 20px;
+		}
+	}
+
+	&__title {
+		font-family: "GGSB", sans-serif;
+		text-transform: uppercase;
+		margin-bottom: 22px;
+		font-size: 20px;
+		color: #fff;
+		
+		@include media('<=xxxlg') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxlg') {
+			font-size: 16px;
+		}
+		
+		@include media('<=sm') {
+			color: $accent;
+			font-size: 14px;
+		}
+	}
+
+	&__text {
+		font-family: "GTR", sans-serif;
+		color: #a3a3a3;
+		line-height: 1.4;
+		font-size: 14px;
+		
+		@include media('<=sm') {
+			line-height: 1.55;
+			color: #fff;
+		}
+	}
+}

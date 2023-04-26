@@ -13,6 +13,31 @@
 		margin-top: -70px;
 	}
 
+	&_page {
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('#{$images-path}hero-bg-2.png') center top / cover no-repeat transparent;
+	
+		@include media('<=md') {
+			#{$self}__title {
+				font-size: 36px;
+			}
+		}
+	
+		@include media('<=xs') {
+			background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('#{$images-path}hero-bg-top-2.png') center top / cover no-repeat transparent;
+
+			#{$self}__title {
+				font-size: 28px;
+			}
+		}
+	
+		@include media('<=xxs') {
+
+			#{$self}__title {
+				font-size: 20px;
+			}
+		}
+	}
+
 	&__inner {
 		height: 100%;
 		display: flex;
@@ -123,7 +148,10 @@
 	}
 
 	&__text {
-
+		font-family: "GTR", sans-serif;
+		max-width: 370px;
+		color: #fff;
+		line-height: 1.6;
 	}
 
 	&__side-text {

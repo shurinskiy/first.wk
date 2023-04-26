@@ -16,6 +16,24 @@
 	@include media('<=xs') {
 		font-size: 18px;
 	}
+
+	span:first-child {
+		display: block;
+		color: #fff;
+		font-size: 16px;
+		
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 12px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 11px;
+		}
+	}
 	
 	&_small {
 		font-size: 20px;

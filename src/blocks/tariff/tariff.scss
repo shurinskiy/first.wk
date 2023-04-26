@@ -17,11 +17,7 @@
 	}
 	
 	&__text {
-		
-		@include media('<=xs') {
-			font-size: 14px;
-			line-height: 1.6;
-		}
+
 	}
 
 	&__cards {

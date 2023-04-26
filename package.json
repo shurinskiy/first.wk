@@ -51,8 +51,10 @@
 	},
 	"dependencies": {
 		"animate-scss": "^3.2.1",
+		"enquire.js": "^2.1.6",
 		"jquery": "^3.6.0",
 		"scroll-lock": "^2.1.5",
+		"swiped-events": "^1.1.7",
 		"swiper": "^9.2.4"
 	},
 	"externalJs": {
@@ -68,6 +70,6 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened"
+		"omit": "@@,js-,active,opened,swiper"
 	}
 }

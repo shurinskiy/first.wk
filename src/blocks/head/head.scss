@@ -9,7 +9,7 @@
 	}
 
 	&__title {
-		grid-column: span 1;
+		grid-column: 1 / span 1;
 
 		@include media('<=md') {
 			margin-bottom: 20px;
@@ -17,10 +17,20 @@
 	}
 	
 	&__text {
-		grid-column: span 1;
+		grid-column: 2 / span 2;
 		font-family: "GTR", sans-serif;
 		max-width: 700px;
 		font-size: 20px;
+		line-height: 1.4;
 		color: #fff;
+		
+		@include media('<=sm') {
+			line-height: 1.55;
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 14px;
+		}
 	}
 }
