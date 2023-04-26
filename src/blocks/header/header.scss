@@ -19,6 +19,11 @@
 		color: inherit;
 		text-decoration: none;
 		margin-right: 195px;
+		transition: filter 0.3s;
+
+		&:hover {
+			filter: drop-shadow(0 0 8px #fff);
+		}
 
 		img {
 			display: block;
@@ -51,8 +56,8 @@
 			position: fixed;
 			z-index: 12;
 			top: 0;
-			left: -350px; 
-			max-width: 350px;
+			left: -375px; 
+			max-width: 375px;
 			transition: left 0.2s linear;
 	
 			&.opened {
@@ -88,6 +93,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		transition: text-shadow 0.3s;
+		
+		&:hover {
+			text-shadow: 1px 1px 15px #fff, -1px -1px 15px #fff;
+		}
 
 		@include media('<=lg') {
 			span {

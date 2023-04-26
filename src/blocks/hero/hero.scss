@@ -5,7 +5,6 @@
 	margin-top: -90px;
 	padding-top: 90px;
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('#{$images-path}hero-bg-1.png') center top / cover no-repeat transparent;
-	margin-bottom: 100px;
 	
 	@include media('<=xs') {
 		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('#{$images-path}hero-bg-top-1.png') center top / cover no-repeat transparent;
@@ -164,13 +163,18 @@
 
 	&__down {
 		@extend %reset-button;
-		width: 25px;
-		height: 13px;
-		background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-') center / contain no-repeat transparent;
+		width: 40px;
+		height: 20px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-') center / 25px 13px no-repeat transparent;
 		position: absolute;
-		bottom: 60px;
-		left: calc(50% - 12px);
-		
+		bottom: 55px;
+		left: calc(50% - 20px);
+		transition: filter 0.3s;
+
+		&:hover {
+			filter: drop-shadow(0 0 3px #fff);
+		}
+		  
 		@include media('<=xs') {
 			display: none;
 		}

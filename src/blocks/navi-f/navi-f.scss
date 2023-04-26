@@ -1,0 +1,72 @@
+.navi-f {
+	$self: &;
+	color: #fff;
+	display: flex;
+		
+	@include media('<=sm') {
+		display: block;
+	}
+
+	&__col {
+		margin-right: 50px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 20px;
+		margin-bottom: -1.2em;
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			padding-top: 30px;
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__links {
+		padding-top: 70px;
+		
+		@include media('<=md') {
+			padding-top: 50px;
+		}
+		
+		@include media('<=sm') {
+			padding-top: 0;
+		}
+	}
+
+	&__link {
+		font-family: "GTR", sans-serif;
+		text-decoration: none;
+		color: inherit;
+		display: block;
+		color: #646464;
+		padding: 7px 0;
+		transition: color 0.3s;
+		
+		@include media('<=xs') {
+			padding: 5px 0;
+			font-size: 15px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}

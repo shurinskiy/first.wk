@@ -2,9 +2,9 @@
 	$self: &;
 		
 	@include media('<=sm') {
-		border-bottom: 1px solid #272727;
-		margin-bottom: 50px;
-		background: linear-gradient(to top, #151515 50%, rgba(21, 21, 21, 0)), url('#{$images-path}contact-bg-mobile.png') top center / 100% auto no-repeat;
+		// border-bottom: 1px solid #272727;
+		// margin-bottom: 50px;
+		background: linear-gradient(to top, #151515 25%, rgba(21, 21, 21, 0.95) 50%, rgba(21, 21, 21, 0)), url('#{$images-path}contact-bg-mobile.png') top center / 100% auto no-repeat;
 	}
 		
 	@include media('<=xs') {
@@ -45,7 +45,7 @@
 		justify-content: center;
 		
 		@include media('<=sm') {
-			padding: 400px 20px 50px;
+			padding: 400px 20px 55px;
 			width: auto;
 		}
 	}

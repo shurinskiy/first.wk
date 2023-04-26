@@ -3,8 +3,9 @@
 	display: block;
 	
 	&:hover {
-		#{$self}__image img {
-			transform: scale(110%);
+		#{$self}__image {
+			img { transform: scale(110%); }
+			&::after { filter: drop-shadow(0 0 5px #fff); }
 		}
 	}
 
@@ -24,7 +25,8 @@
 			position: absolute;
 			bottom: 25px;
 			left: 20px;
-		
+			transition: filter 0.3s;
+			
 			@include media('<=xs') {
 				display: none;
 			}

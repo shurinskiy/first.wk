@@ -41,6 +41,7 @@
 		font-family: "GGSB", sans-serif;
 		background-color: $accent;
 		color: #2d2d2d;
+		transition: box-shadow 0.3s;
 		
 		&#{$self}_wapp::before { background-image: url('#{$images-path}icons-sprite.svg#icon-wapp-view-black'); }
 		&#{$self}_tgm::before { background-image: url('#{$images-path}icons-sprite.svg#icon-tgm-view-black'); }
@@ -48,24 +49,42 @@
 		&#{$self}_mail::before { background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-black'); }
 		&#{$self}_phone::before { background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-black'); }
 		&#{$self}_phone-lined::before { background-image: url('#{$images-path}icons-sprite.svg#icon-phone-lined-view-black'); }
+
+		&:hover {
+			box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
+		}	
 	}
 
 	&_secondary {
 		color: $accent;
 		border: 1px solid $accent;
+		transition: text-shadow 0.3s;
+
+		&:hover {
+			text-shadow: 1px 1px 15px #fff, -1px -1px 15px #fff;
+		}
 	}
 	
 	&_outlined {
 		border: 1px solid #3d3d3d;
 		color: #fff;
-	}
+		transition: text-shadow 0.3s;
 
+		&:hover {
+			text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.75), -1px -1px 15px rgba(255, 255, 255, 0.75);
+		}
+	}
+	
 	&_small {
-		color: $accent;
+		color: #fff;
 		padding: 14px 16px;
 		border: 1px solid #3d3d3d;
-		justify-content: flex-start;
 		font-size: 10px;
+		transition: text-shadow 0.3s;
+		
+		&:hover {
+			text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.75), -1px -1px 15px rgba(255, 255, 255, 0.75);
+		}
 	}
 
 	&_wapp::before {

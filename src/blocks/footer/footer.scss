@@ -1,0 +1,160 @@
+.footer {
+	$self: &;
+	border-top: 1px solid #272727;
+	
+	&__inner {
+		display: flex;
+		padding-top: 55px;
+		padding-bottom: 45px;
+		justify-content: space-between;
+
+		@include media('<=lg') {
+			display: block;
+		}
+	}
+
+	&__side {
+		margin-right: 40px;
+		max-width: 500px;
+		width: 100%;
+
+		@include media('<=lg') {
+			margin-bottom: 60px;
+		}
+
+		@include media('<=md') {
+			margin-bottom: 50px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 24px;
+	}
+
+	&__email {
+		display: block;
+		font-family: "GTR", sans-serif;
+		text-decoration: none;
+		color: #646464;
+		margin-bottom: 8px;
+		transition: color 0.3s;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+	
+	&__phone {
+		display: block;
+		text-decoration: none;
+		margin-bottom: 25px;
+		font-size: 22px;
+		color: #fff;
+		transition: text-shadow 0.3s;
+		
+		@include media('<=xxlg') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xlg') {
+			font-size: 16px;
+		}
+		
+		&:hover {
+			text-shadow: 1px 1px 15px #fff, -1px -1px 15px #fff;
+		}
+	}
+
+	&__socials {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+		grid-gap: 8px;
+	}
+
+	&__social {
+
+	}
+
+	&__navi {
+		min-width: 780px;
+		
+		@include media('<=lg') {
+			min-width: auto;
+		}
+	}
+
+	&__bottom {
+		height: 100px;
+		border-top: 1px solid #272727;
+		padding-bottom: 20px;
+		padding-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		@include media('<=xxs') {
+			padding-bottom: 48px;
+			padding-top: 48px;
+			height: auto;
+			display: block;
+		}
+	}
+
+	&__partners {
+		flex-shrink: 0;
+		margin-right: 30px;
+
+		@include media('<=xxs') {
+			margin: 0 0 40px;
+		}
+	}
+
+	&__partner {
+		display: inline-block;
+		margin-right: 25px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		img {
+			max-height: 35px;
+		}
+	}
+
+	&__info {
+		font-family: "GTR", sans-serif;
+		font-size: 14px;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media('<=xxs') {
+			display: block;
+		}
+	}
+
+	&__info-link {
+		color: #646464;
+		margin-right: 60px;
+		line-height: 1.5;
+		transition: color 0.3s;
+
+		@include media('<=xxs') {
+			margin: 0;
+			display: block;
+		}
+
+		&:hover {
+			color: #fff;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
