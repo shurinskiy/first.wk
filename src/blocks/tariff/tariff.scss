@@ -1,6 +1,9 @@
 .tariff {
 	$self: &;
-	border-top: 1px solid #272727;
+	
+	&_border-top {
+		border-top: 1px solid #272727;
+	}
 
 	&__head {
 		padding-top: 140px;

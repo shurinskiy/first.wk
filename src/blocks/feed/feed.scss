@@ -1,6 +1,9 @@
 .feed {
 	$self: &;
-	border-bottom: 1px solid #272727;
+	
+	&_border-bottom {
+		border-bottom: 1px solid #272727;
+	}
 
 	&__inner {
 

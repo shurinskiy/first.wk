@@ -1,6 +1,12 @@
 .card-f {
 	$self: &;
 	position: relative;
+
+	&:hover {
+		#{$self}__image img {
+			transform: scale(110%);
+		}
+	}
 	
 	&__image {
 		display: block;
@@ -14,6 +20,7 @@
 			height: 100%;
 			object-fit: cover;
 			min-height: 470px;
+			transition: transform 0.3s;
 		}
 	}
 

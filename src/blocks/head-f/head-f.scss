@@ -3,9 +3,17 @@
 	padding: 100px 0;
 	display: flex;
 	align-items: center;
-
+	
 	@include media('<=md') {
 		display: block;
+	}
+	
+	@include media('<=xs') {
+		padding: 50px 0;
+	}
+	
+	@include media('<=xxs') {
+		padding: 50px 0 30px;
 	}
 
 	&__side {
