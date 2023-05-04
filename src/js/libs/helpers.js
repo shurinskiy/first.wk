@@ -216,12 +216,14 @@ export const scrollToId = (items) => {
 	items.forEach(item => {
 		item.addEventListener('click', (e) => {
 			e.preventDefault();
-			document.getElementById(item.getAttribute('href').substring(1)).scrollIntoView({
+			let link = item.getAttribute('href').split('#')[1];
+
+			document.getElementById(link).scrollIntoView({
 				behavior: 'smooth',
 				block: 'start'
 			});
 		});
-	});		
+	});
 }
 
 /* 

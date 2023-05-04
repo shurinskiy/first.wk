@@ -1,0 +1,43 @@
+.reserv {
+	$self: &;
+	
+	&_border-bottom {
+		border-bottom: 1px solid #272727;
+	}
+
+	&__inner {
+
+	}
+
+	&__head {
+
+	}
+
+	&__slider {
+		margin-bottom: 50px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 50px 20px;
+		
+		@include media('<=xlg') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=780px') {
+			display: flex;
+			grid-gap: unset;
+		}
+	}
+
+	&__card {
+		grid-column: span 1;
+		height: auto;
+	}
+}

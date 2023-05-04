@@ -1,21 +1,17 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Pagination, Autoplay } from 'swiper';
 
 (() => {
 
-	const slider = new Swiper(".showcase__slider", {
-		modules: [Navigation, Pagination, Autoplay],
+	const slider = new Swiper(".gallery__slider", {
+		modules: [Pagination, Autoplay],
 		loop: true,
 		autoplay: {
 			delay: 5000,
 			pauseOnMouseEnter: true
 		},
-		navigation: {
-			nextEl: '.showcase__next',
-			prevEl: '.showcase__prev',
-		},
 		pagination: {
-			el: '.showcase__pagination',
-			bulletClass: 'showcase__dot',
+			el: '.gallery__pagination',
+			bulletClass: 'gallery__dot',
 			bulletActiveClass: 'active',
 			clickable: true,
 		},
@@ -29,8 +25,8 @@ import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 			780: { 
 				speed: 1500,
 				centeredSlides : false, 
-				slidesPerView: 1.3,
-				spaceBetween: 65,
+				slidesPerView: 1,
+				spaceBetween: 30,
 			},
 		}
 	});

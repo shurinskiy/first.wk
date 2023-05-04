@@ -1,0 +1,170 @@
+.gallery {
+	$self: &;
+	
+	&__inner {
+		display: grid;
+		// grid-template-columns: 1fr minmax(320px, 1fr);
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 60px;
+		align-items: center;
+		padding-top: 100px;
+
+		@include media('<=lg') {
+			display: block;
+		}
+
+		@include media('<=xs') {
+			padding-top: 50px;
+		}
+	}
+
+	&__main {
+		grid-column: span 5;
+			
+		@include media('<=lg') {
+			margin-bottom: 100px;
+		}
+			
+		@include media('<=sm') {
+			margin-bottom: 40px;
+		}
+	}
+	
+	&__title {
+		margin-bottom: 30px;		
+	}
+	
+	&__text {
+		column-count: 2;
+		column-width: 250px;
+		column-gap: 20px;
+		color: #fff;
+		font-family: "GTR", sans-serif;
+		line-height: 1.45;
+		margin-bottom: 40px;
+			
+		@include media('<=sm') {
+			font-size: 15px;
+		}
+			
+		@include media('<=xs') {
+			font-size: 14px;
+		}
+
+		p {
+			break-inside: avoid;
+			margin-bottom: 20px;
+		}
+	}
+	
+	&__button {
+		@include media('<=xxs') {
+			width: 100%;
+		}
+	}
+	
+	&__side {
+		grid-column: span 7;
+		position: relative;
+			
+		@include media('<=sm') {
+			margin: 0 -20px;
+		}
+	}
+	
+	&__flyer {
+		display: block;
+		position: absolute;
+		z-index: 2;
+		max-width: 320px;
+		width: 32%;
+		min-width: 200px;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+		filter: grayscale(60%) brightness(80%);
+		transition: filter 0.3s;
+
+		&:hover {
+			filter: none;
+		}
+			
+		@include media('<=sm') {
+			display: none;
+		}
+
+		&:nth-child(1) {
+			top: 50%;
+			left: -50px;
+			
+			@include media('<=lg') {
+				left: -15px;
+			}
+		}
+
+		&:nth-child(2) {
+			top: -70px;
+			left: 40%;
+		}
+
+		&:nth-child(3) {
+			bottom: -50px;
+			right: -20px;
+			
+			@include media('<=lg') {
+				right: -15px;
+			}
+		}
+	}
+	
+	&__slider {
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	&__slide {
+		overflow: hidden;
+		border-radius: 8px;
+
+		img {
+			object-fit: cover;
+			display: block;
+			height: 100%;
+			width: 100%;
+			min-height: 350px;
+			max-height: 600px;
+			
+			@include media('<=xxs') {
+				min-height: 200px;
+			}
+		}
+	}
+
+	&__pagination {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 0;
+		left: 0;
+		bottom: 10px;
+		width: 100%;
+
+		@include media('<=sm') {
+			display: none;
+		}
+	}
+
+	&__dot {
+		width: 8px;
+		height: 8px;
+		margin: 0 7px;
+		cursor: pointer;
+		background-color: #fff;
+		border-radius: 50%;
+		z-index: 1;
+		
+		&.active {
+			background-color: #151515;
+		}
+	}
+}

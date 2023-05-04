@@ -4,17 +4,17 @@
 	height: 100vh;
 	margin-top: -90px;
 	padding-top: 90px;
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('#{$images-path}hero-bg-1.png') center top / cover no-repeat transparent;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--home-hero-bg) center top / cover no-repeat transparent;
 	
 	@include media('<=xs') {
-		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('#{$images-path}hero-bg-top-1.png') center top / cover no-repeat transparent;
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--home-hero-bg-mobile) center top / cover no-repeat transparent;
 		max-height: 800px;
 		padding-top: 70px;
 		margin-top: -70px;
 	}
 
 	&_page {
-		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('#{$images-path}hero-bg-2.png') center top / cover no-repeat transparent;
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--inner-hero-bg) center top / cover no-repeat transparent;
 	
 		@include media('<=md') {
 			#{$self}__title {
@@ -23,7 +23,7 @@
 		}
 	
 		@include media('<=xs') {
-			background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('#{$images-path}hero-bg-top-2.png') center top / cover no-repeat transparent;
+			background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--inner-hero-bg-mobile) center top / cover no-repeat transparent;
 
 			#{$self}__title {
 				font-size: 28px;

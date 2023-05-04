@@ -1,6 +1,6 @@
 import scrollLock from 'scroll-lock';
 import { menuToggle } from "../../js/libs/menuToggle";
-import { scrollToId } from "../../js/libs/helpers";
+// import { scrollToId } from "../../js/libs/helpers";
 
 (() => {
 	const header = document.querySelector('.header');
@@ -28,5 +28,5 @@ import { scrollToId } from "../../js/libs/helpers";
 		});
 	});
 	
-	scrollToId(document.querySelectorAll('a[href^="#"]'));
+	// scrollToId(document.querySelectorAll('a[href*="#"]'));
 })();

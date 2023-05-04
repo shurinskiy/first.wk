@@ -40,6 +40,10 @@
 				font-size: 14px;
 			}
 		}
+
+		&_region {
+			@include hide();
+		}
 		
 		input, textarea {
 			@extend %reset-input;
@@ -65,8 +69,26 @@
 		textarea {
 			min-height: 105px;
 		}
-		
-		
+	}
+
+	&__alert {
+		padding: 0 0 10px;
+		margin-bottom: -5px;
+		color: #f00;
+		font-family: "GTR", sans-serif;
+			
+		@include media('<=xs') {
+			font-size: 14px;
+		}
+
+		span {
+			display: block;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 	
 	&__submit {

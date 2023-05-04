@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 
 (() => {
 
-	$(".feed__slider").each(function(i) {
+	$(".reserv__slider").each(function(i) {
 		let swiper;
 		const $item = $(this);
 		const $wrapper = $item.find('.swiper-wrapper');
@@ -18,7 +18,7 @@ import Swiper from 'swiper';
 			});
 		}
 
-		enquire.register("screen and (max-width: 580px)", {
+		enquire.register("screen and (max-width: 780px)", {
 			match : function() {
 				enableSwiper($item[0]);
 			},
